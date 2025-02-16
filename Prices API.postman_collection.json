@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "d8b41d03-ea9f-4f90-87ad-231c5ef970f0",
+		"name": "Prices API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25179795"
+	},
+	"item": [
+		{
+			"name": "GetPrice14thJune10:00",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"priceDate\", \"2020-06-14T10:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/product/{{productID}}?brandId={{brandId}}&priceDate={{priceDate}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"product",
+						"{{productID}}"
+					],
+					"query": [
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "priceDate",
+							"value": "{{priceDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPrice14thJune16:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"priceDate\", \"2020-06-14T16:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/product/{{productID}}?brandId={{brandId}}&priceDate={{priceDate}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"product",
+						"{{productID}}"
+					],
+					"query": [
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "priceDate",
+							"value": "{{priceDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPrice14thJune21:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"priceDate\", \"2020-06-14T21:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/product/{{productID}}?brandId={{brandId}}&priceDate={{priceDate}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"product",
+						"{{productID}}"
+					],
+					"query": [
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "priceDate",
+							"value": "{{priceDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPrice15thJune10:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"priceDate\", \"2020-06-15T10:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/product/{{productID}}?brandId={{brandId}}&priceDate={{priceDate}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"product",
+						"{{productID}}"
+					],
+					"query": [
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "priceDate",
+							"value": "{{priceDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPrice16thJune21:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"priceDate\", \"2020-06-16T21:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices/product/{{productID}}?brandId={{brandId}}&priceDate={{priceDate}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices",
+						"product",
+						"{{productID}}"
+					],
+					"query": [
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "priceDate",
+							"value": "{{priceDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "brandId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "priceDate",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "productID",
+			"value": "35455",
+			"type": "default"
+		}
+	]
+}
