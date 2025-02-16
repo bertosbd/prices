@@ -109,6 +109,24 @@ http://localhost:8080/swagger-ui.html
 
 Swagger UI makes it easy to explore and test the API without the need for external tools.
 
+## Postman Collection
+
+A Postman collection is included in the project to facilitate testing the API endpoints.
+
+### Importing the Postman Collection
+
+1. Open Postman.
+2. Click on `File > Import`.
+3. Select the `Prices API.postman_collection.json` file located in the project directory.
+4. Click `Import`.
+
+### Using the Postman Collection
+
+1. After importing, you will see the `Prices API` collection in Postman.
+2. The collection includes predefined requests to test required scenarios.
+3. Select a request and click the `Send` button to execute it.
+4. You can modify the request parameters and headers as needed.
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
