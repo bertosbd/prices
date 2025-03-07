@@ -65,6 +65,55 @@ mvn clean install
 mvn spring-boot:run
 ```
 
+## Docker
+
+### Building the Docker Image
+
+To build the Docker image for the Prices API, run the following command in the root directory of the project (where the
+`Dockerfile` is located):
+
+```sh
+docker build -t prices-api .
+```
+
+**Note:** Regularly check for updates and security patches for the base image (`eclipse-temurin:17-jre-alpine`) to
+ensure the container remains secure.
+
+### Running the Docker Container
+
+To run the Docker container, use the following command:
+
+```sh
+docker run -d -p 8080:8080 --name prices-api-container prices-api
+```
+
+This command will start the container in detached mode and map port 8080 of the container to port 8080 on your host
+machine.
+
+### Stopping the Docker Container
+
+To stop the running Docker container, use the following command:
+
+```sh
+docker stop prices-api-container
+```
+
+### Removing the Docker Container
+
+To remove the Docker container, use the following command:
+
+```sh
+docker rm prices-api-container
+```
+
+### Accessing the Application
+
+Once the container is running, you can access the Prices API at:
+
+```
+http://localhost:8080
+```
+
 ## API Endpoints
 
 The following endpoints are available:
@@ -135,10 +184,7 @@ A Postman collection is included in the project to facilitate testing the API en
 3. Select a request and click the `Send` button to execute it.
 4. You can modify the request parameters and headers as needed.
 
-To include information in the `README.md` about the OpenAPI specification location and how to generate it using the
-Maven OpenAPI plugin, you can add the following sections:
-
-### OpenAPI Specification
+## OpenAPI Specification
 
 The OpenAPI specification for the Prices API is located in the `src/main/resources/doc` directory. This file provides a
 detailed description of the API endpoints, request/response formats, and other relevant information.
