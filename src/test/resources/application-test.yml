@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: prices
+  datasource:
+    url: jdbc:h2:mem:productsdbtest
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: none

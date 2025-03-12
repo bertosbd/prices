@@ -1,0 +1,102 @@
+openapi: 3.0.1
+info:
+  title: Prices Api operations definition
+  version: v0
+paths:
+  /prices/product/{productId}:
+    get:
+      tags:
+        - prices-controller
+      summary: Get product price by brandId and date
+      operationId: getProductPriceByBrandAndDate
+      parameters:
+        - name: productId
+          in: path
+          description: Product identifier
+          required: true
+          schema:
+            minimum: 1
+            type: integer
+            format: int32
+        - name: brandId
+          in: query
+          description: Product brandId
+          required: true
+          schema:
+            minimum: 1
+            type: integer
+            format: int32
+        - name: priceDate
+          in: query
+          description: Price date
+          required: true
+          schema:
+            type: string
+            format: date-time
+          example: 2020-12-31T23:59:59
+      responses:
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ErrResponse"
+        400:
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ErrResponse"
+        404:
+          description: Price not found
+          content:
+            '*/*':
+              schema:
+                type: string
+        200:
+          description: Price found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PriceResponse"
+components:
+  schemas:
+    ErrorDetail:
+      type: object
+      properties:
+        field:
+          type: string
+        message:
+          type: string
+    ErrResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        details:
+          type: array
+          items:
+            $ref: "#/components/schemas/ErrorDetail"
+    PriceResponse:
+      type: object
+      properties:
+        idProducto:
+          type: string
+        idBrand:
+          type: string
+        priceList:
+          type: string
+        priceStartDate:
+          type: string
+          format: date-time
+        priceEndDate:
+          type: string
+          format: date-time
+        price:
+          type: number
